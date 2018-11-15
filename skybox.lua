@@ -11,14 +11,14 @@ if has_skybox_mod then
 		maxy = max_y,
 		always_day = true,
 		fly = true,
-		message = "You are now entering in a warzone, protections won't work here!",
+		message = "You are now entering a warzone, protections won't work here!",
 		textures = {
-			"warzone_up.jpg^[transformR270",
-			"warzone_dn.jpg^[transformR90",
-			"warzone_ft.jpg",
-			"warzone_bk.jpg",
-			"warzone_lf.jpg",
-			"warzone_rt.jpg"
+			"warzone_up.png^[transformR270",
+			"warzone_dn.png^[transformR90",
+			"warzone_ft.png",
+			"warzone_bk.png",
+			"warzone_lf.png",
+			"warzone_rt.png"
 		}
 	})
 
