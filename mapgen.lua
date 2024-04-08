@@ -1,6 +1,6 @@
 -- Set the 3D noise parameters for the terrain.
 local np_terrain = {
-	offset = 0,
+	offset = 0.15,
 	scale = 1,
 	spread = {x = 200, y = 20, z = 200},
 	seed = 123456,
@@ -49,13 +49,13 @@ minetest.register_on_generated(function(minp, maxp, seed)
 			local density_noise = nvals_terrain[ni]
 			if density_noise > 1.76 then
 				data[vi] = minetest.get_content_id("moreores:mineral_mithril")
-			elseif density_noise > 1.72 then
+			elseif density_noise > 1.64 then
 				local ores = {"moreores:mineral_silver","default:stone_with_diamond","default:stone_with_gold","default:stone_with_mese","default:stone_with_tin"}
 				data[vi] = minetest.get_content_id(rand(ores))
-			elseif density_noise > 1.61 then
+			elseif density_noise > 1.55 then
 				local ores = {"default:stone_with_copper","default:stone_with_iron","technic:mineral_uranium","technic:mineral_lead","technic:mineral_zinc","technic:mineral_chromium"}
 				data[vi] = minetest.get_content_id(rand(ores))
-			elseif density_noise > 1.51 then
+			elseif density_noise > 1.46 then
 				data[vi] = minetest.get_content_id(rand({"default:ice","technic:mineral_sulfur"}))
 			elseif density_noise > 1.41 then
 				data[vi] = minetest.get_content_id("mapgen_stone")
@@ -83,7 +83,7 @@ local function register_deco(schem)
 		deco_type = "schematic",
 		sidelen = 8,
 		place_on = "vacuum:vacuum",
-		fill_ratio = 0.1,
+		fill_ratio = 0.03,
 		y_min = warzone.y_start,
 		y_max = warzone.y_start+warzone.y_height,
 		schematic = schem,
