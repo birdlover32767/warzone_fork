@@ -83,7 +83,7 @@ local function register_deco(schem)
 		deco_type = "schematic",
 		sidelen = 8,
 		place_on = "vacuum:vacuum",
-		fill_ratio = 10,
+		fill_ratio = 0.1,
 		y_min = warzone.y_start,
 		y_max = warzone.y_start+warzone.y_height,
 		schematic = schem,
